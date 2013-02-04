@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+	\node [draw, fill=yellow, minimum size=5em] (hellonode) {Hello, Node};
+	\foreach \anchor/\placement in {%
+			north/above, north east/above, east/right, south east/below, south/below, south west/below, west/left, north west/above%
+	}{%
+		\path [draw, thick, fill=white] ([xshift=-0.125em, yshift=-0.125em] hellonode.\anchor) rectangle ++(0.25em, 0.25em);
+		\node at (hellonode.\anchor) [font=\tiny, \placement] {\anchor};
+	}
+\end{tikzpicture}

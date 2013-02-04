@@ -1,0 +1,8 @@
+\begin{tikzpicture}[scale=1.5]
+% Draw some lines...
+\draw [->] (0,0) -- ++(2em, 4em);
+\draw [dotted] (0,0) -- ++(2em, 0);
+\draw [dotted] (2em, 0) -- ++(0, 4em);
+	
+% Place some nodes...
+\end{tikzpicture}

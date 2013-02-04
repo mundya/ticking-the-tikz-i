@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node at (0em, 0em) [draw, thick, blue]
+	(my element A) {$x^\alpha$};
+\node at (4em, 0em) [draw, thick, purple]
+	(my element B) {$x^\beta$};
+\draw [thick, ->] (my element A.north east) ..
+	controls ++(45:2em) and ++(90:2em)
+	.. (my element B.north);
+\end{tikzpicture}

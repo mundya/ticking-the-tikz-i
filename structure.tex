@@ -1,0 +1,71 @@
+\title{Ticking the TikZ Box \\An Introduction}
+\subtitle{Creating Diagrams in \LaTeX{} using PGF/Ti\emph{k}Z}
+\author{Andrew Mundy \\andrew.mundy@cs.man.ac.uk}
+
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\setbeamertemplate{caption}[plain]
+\mode<presentation>\captionsetup{labelformat=empty,textformat=empty,labelsep=none}
+\mode
+<all>
+
+\usepackage{listings}
+\lstdefinelanguage{tikz}[common]{tex}{%
+	moretexcs={begin, end, draw, fill, path, node},
+	morekeywords={rectangle, circle, node, cycle},
+	morecomment=[l]{\%},
+	morestring=[b]{"},
+	morestring=[b]{\$},
+}
+\lstset{
+	language=tikz,
+	basicstyle=\small,
+	keywordstyle=\color{uompurple}\bfseries,
+	stringstyle=\color{blue}\itshape,
+	numberstyle=\tiny\color{uomgrey},
+}
+\mode<article>
+\lstset{
+	numbers=left,
+	numberstyle=\tiny,
+	frame=tb,
+}
+\mode
+<all>
+
+\newcommand{\acaption}[1]{\only<article>{\caption{#1}}}
+\newcommand{\alcaption}[1]{\only<article>{caption=#1,}}
+
+\input{tikz-styles}
+
+\begin{document}
+
+\maketitle
+\begin{frame}{Ticking the Ti\emph{k}Z Box}
+	\tableofcontents
+\end{frame}
+\AtBeginSection[]
+{
+	\begin{frame}{Ticking the Ti\emph{k}Z Box -- Outline}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+\section{Motivation}
+
+\section{Hello, World!}
+\input{slides/getting-started}
+
+\section{More Complicated Examples}
+\subsection{Styling TikZ Pictures}
+\input{slides/styling}
+
+\subsection{Animating a Diagram with Beamer}
+
+\section{Finishing Examples}
+
+\section{Conclusion?}
+
+\end{document}
